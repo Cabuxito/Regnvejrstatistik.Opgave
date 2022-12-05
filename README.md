@@ -29,9 +29,13 @@ The program is a console application, user can input 5 measurement values and as
 ![image](https://user-images.githubusercontent.com/89253662/205731553-91f57398-9ed1-4117-ab56-b2cba9d49e1b.png)
 
 1- Input some mmeasurement values, five to be precisely.
+
 2- Show all the values.
+
 3- Show average of values.
+
 4- Show the Maximum value of user input.
+
 5- Show the Minimum value of user input.
 
 ## Tags
