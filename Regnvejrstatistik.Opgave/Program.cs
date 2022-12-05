@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-double[] regnVejVærdier = new double[5];
+﻿double[] regnVejVærdier = new double[5];
 int valg;
 
 do
