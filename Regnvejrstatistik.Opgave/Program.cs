@@ -1,5 +1,5 @@
 ﻿double[] regnVejVærdier = new double[5];
-int valg = 0;
+int valg;
 
 do
 {
@@ -19,23 +19,32 @@ do
 	switch (valg)
 	{
 		case 1:
+			for (int i = 0; i < regnVejVærdier.Length; i++)
+			{
+				Console.Write("Indtast Værdier (mm): ");
+				regnVejVærdier[i] = Convert.ToDouble(Console.ReadLine());
+			}
 			break;
 		case 2:
+			UdskrivVærdier(regnVejVærdier);
 			break;
 		case 3:
+			Console.WriteLine(Queryable.Average(regnVejVærdier.AsQueryable()));
 			break;
 		case 4:
+			Console.WriteLine(UdskrivMaxVærdi(regnVejVærdier));
 			break;
 		case 5:
+			Console.WriteLine(UdskrivMinVærdi(regnVejVærdier));
 			break;
 		default:
+			Console.WriteLine("Prøv igen.)");
 			break;
 	}
-
 } while (true);
 
 #region Methods
-static string MaxVærdi(double[] array)
+static string UdskrivMaxVærdi(double[] array)
 {
 	Console.Clear();
 	if (array.Length > 0)
@@ -44,7 +53,7 @@ static string MaxVærdi(double[] array)
 		return String.Format("Prøv igen.");
 }
 
-static string MinVærdi(double[] array)
+static string UdskrivMinVærdi(double[] array)
 {
 	Console.Clear();
 	if (array.Length > 0)
@@ -53,7 +62,7 @@ static string MinVærdi(double[] array)
 		return String.Format("Prøv Igen");
 }
 
-static void VisVærdier(double[] array)
+static void UdskrivVærdier(double[] array)
 {
 	Console.Clear();
 	if (array.Length > 0)
