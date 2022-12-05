@@ -33,3 +33,33 @@ do
 	}
 
 } while (true);
+
+#region Methods
+static string MaxVærdi(double[] array)
+{
+	Console.Clear();
+	if (array.Length > 0)
+		return String.Format($"Max værdi: {array.Max():F2} mm");
+	else
+		return String.Format("Prøv igen.");
+}
+
+static string MinVærdi(double[] array)
+{
+	Console.Clear();
+	if (array.Length > 0)
+		return String.Format($"Minimum værdi: {array.Max():F2} mm");
+	else
+		return String.Format("Prøv Igen");
+}
+
+static void VisVærdier(double[] array)
+{
+	Console.Clear();
+	if (array.Length > 0)
+		for (int i = 0; i < array.Length; i++)
+			Console.WriteLine($"Måleværdi {i + 1} = {array[1]} mm");
+	else
+		Console.WriteLine("Prøve med indtast nogle værdier på 1.");
+}
+#endregion
